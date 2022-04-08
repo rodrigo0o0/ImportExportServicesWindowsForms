@@ -34,6 +34,8 @@
             this.btnListServices = new System.Windows.Forms.Button();
             this.txtNameService = new System.Windows.Forms.TextBox();
             this.lblNameService = new System.Windows.Forms.Label();
+            this.cbActive = new System.Windows.Forms.CheckBox();
+            this.checkedListBoxServices = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // btnLocalPath
@@ -71,7 +73,7 @@
             // 
             this.txtNameService.Location = new System.Drawing.Point(12, 35);
             this.txtNameService.Name = "txtNameService";
-            this.txtNameService.Size = new System.Drawing.Size(446, 20);
+            this.txtNameService.Size = new System.Drawing.Size(343, 20);
             this.txtNameService.TabIndex = 3;
             this.txtNameService.Text = "Digite o nome do serviço";
             // 
@@ -85,11 +87,32 @@
             this.lblNameService.Text = "Contém no nome do serviço";
             this.lblNameService.Click += new System.EventHandler(this.label1_Click);
             // 
+            // cbActive
+            // 
+            this.cbActive.AutoSize = true;
+            this.cbActive.Location = new System.Drawing.Point(400, 38);
+            this.cbActive.Name = "cbActive";
+            this.cbActive.Size = new System.Drawing.Size(94, 17);
+            this.cbActive.TabIndex = 5;
+            this.cbActive.Text = "Serviço ativo?";
+            this.cbActive.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBoxServices
+            // 
+            this.checkedListBoxServices.FormattingEnabled = true;
+            this.checkedListBoxServices.Location = new System.Drawing.Point(15, 72);
+            this.checkedListBoxServices.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
+            this.checkedListBoxServices.Name = "checkedListBoxServices";
+            this.checkedListBoxServices.Size = new System.Drawing.Size(340, 229);
+            this.checkedListBoxServices.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.checkedListBoxServices);
+            this.Controls.Add(this.cbActive);
             this.Controls.Add(this.lblNameService);
             this.Controls.Add(this.txtNameService);
             this.Controls.Add(this.btnListServices);
@@ -110,6 +133,8 @@
         private System.Windows.Forms.Button btnListServices;
         private System.Windows.Forms.TextBox txtNameService;
         private System.Windows.Forms.Label lblNameService;
+        private System.Windows.Forms.CheckBox cbActive;
+        private System.Windows.Forms.CheckedListBox checkedListBoxServices;
     }
 }
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ExportarImportarServicos.Services;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ExportarImportarServicos
@@ -14,7 +16,7 @@ namespace ExportarImportarServicos
         {
 
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
@@ -30,14 +32,32 @@ namespace ExportarImportarServicos
 
         private void button2_Click(object sender, EventArgs e)
         {
+            checkedListBoxServices.Items.Clear();   
             string nameService = txtNameService.Text;
             if(nameService == "Digite o nome do serviço" || String.IsNullOrEmpty(nameService))
             {
-                MessageBox.Show("Preencha o campo");
+                MessageBox.Show("Digite um nome de Serviço Válido.");
+            }
+            else
+            {
+                List<String> servicesNames =UtilService.ListServicesNames(nameService,cbActive.Checked);
+                if(servicesNames != null)
+                {
+                    foreach(String serviceName in servicesNames)
+                    {
+                        checkedListBoxServices.Items.Add(serviceName);
+
+                    }
+                }
             }
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvServices_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
