@@ -6,4 +6,4 @@ C:\Users\sande\source\repos\ExportarImportarServicos\ExportarImportarServicos\ob
 C:\Users\sande\source\repos\ExportarImportarServicos\ExportarImportarServicos\obj\Debug\ExportarImportarServicos.csproj.CoreCompileInputs.cache
 C:\Users\sande\source\repos\ExportarImportarServicos\ExportarImportarServicos\obj\Debug\ExportarImportarServicos.exe
 C:\Users\sande\source\repos\ExportarImportarServicos\ExportarImportarServicos\obj\Debug\ExportarImportarServicos.pdb
-C:\Users\sande\source\repos\ExportarImportarServicos\ExportarImportarServicos\obj\Debug\ExportarImportarServicos.Form1.resources
+C:\Users\sande\source\repos\ExportarImportarServicos\ExportarImportarServicos\obj\Debug\ExportarImportarServicos.ImportExportServices.resources

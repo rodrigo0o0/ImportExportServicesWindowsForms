@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace ExportarImportarServicos
 {
-    public partial class Form1 : Form
+    public partial class ImportExportServices : Form
     {
-        public Form1()
+        public ImportExportServices()
         {
             InitializeComponent();
         }
@@ -59,6 +59,40 @@ namespace ExportarImportarServicos
 
         private void lvServices_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtNameService_TextChanged(object sender, EventArgs e)
+        {
+        }
+        private void txtNameService_Selected(object sender, EventArgs e)
+        {
+            if(txtNameService.Text == "Digite o nome do serviço")
+            {
+                txtNameService.Text = "";
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtPath.Text))
+            {
+                List<String> checkedNameServices = new List<String>();
+                foreach (string serviceName in checkedListBoxServices.CheckedItems)
+                {
+                    checkedNameServices.Add(serviceName);
+                }
+                var services = UtilService.ListServicesNamesChecked(checkedNameServices);
+                UtilService.ExportServices(services, txtPath.Text);
+            }
+            else
+            {
+                MessageBox.Show("O caminho não pode estar vazio.");
+            }
+            
+           
+
+
 
         }
     }

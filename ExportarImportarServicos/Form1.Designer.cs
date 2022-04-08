@@ -1,6 +1,6 @@
 ﻿namespace ExportarImportarServicos
 {
-    partial class Form1
+    partial class ImportExportServices
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportExportServices));
             this.btnLocalPath = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.txtPath = new System.Windows.Forms.TextBox();
@@ -36,11 +37,12 @@
             this.lblNameService = new System.Windows.Forms.Label();
             this.cbActive = new System.Windows.Forms.CheckBox();
             this.checkedListBoxServices = new System.Windows.Forms.CheckedListBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLocalPath
             // 
-            this.btnLocalPath.Location = new System.Drawing.Point(522, 386);
+            this.btnLocalPath.Location = new System.Drawing.Point(522, 351);
             this.btnLocalPath.Name = "btnLocalPath";
             this.btnLocalPath.Size = new System.Drawing.Size(181, 27);
             this.btnLocalPath.TabIndex = 0;
@@ -54,7 +56,7 @@
             // 
             // txtPath
             // 
-            this.txtPath.Location = new System.Drawing.Point(12, 393);
+            this.txtPath.Location = new System.Drawing.Point(12, 351);
             this.txtPath.Name = "txtPath";
             this.txtPath.Size = new System.Drawing.Size(483, 20);
             this.txtPath.TabIndex = 1;
@@ -76,6 +78,7 @@
             this.txtNameService.Size = new System.Drawing.Size(343, 20);
             this.txtNameService.TabIndex = 3;
             this.txtNameService.Text = "Digite o nome do serviço";
+            this.txtNameService.TextChanged += new System.EventHandler(this.txtNameService_TextChanged);
             // 
             // lblNameService
             // 
@@ -106,11 +109,22 @@
             this.checkedListBoxServices.Size = new System.Drawing.Size(340, 229);
             this.checkedListBoxServices.TabIndex = 6;
             // 
-            // Form1
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(400, 72);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 24);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Exportar Serviços Selecionados";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // ImportExportServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.checkedListBoxServices);
             this.Controls.Add(this.cbActive);
             this.Controls.Add(this.lblNameService);
@@ -118,8 +132,9 @@
             this.Controls.Add(this.btnListServices);
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.btnLocalPath);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "ImportExportServices";
+            this.Text = "Import Export Services Code7";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +150,7 @@
         private System.Windows.Forms.Label lblNameService;
         private System.Windows.Forms.CheckBox cbActive;
         private System.Windows.Forms.CheckedListBox checkedListBoxServices;
+        private System.Windows.Forms.Button button1;
     }
 }
 
